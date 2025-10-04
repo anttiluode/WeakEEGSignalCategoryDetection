@@ -97,7 +97,7 @@ Run statistical analysis on test set
 
 # Brain Localization
 
-![Brain](./brain.png)
+![Brain](./Brain.png)
 
 python App.py
 
