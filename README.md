@@ -1,5 +1,11 @@
 # EEG Weak Signal Category Detection
 
+Video about it: 
+
+https://youtu.be/8yUkTr3MNZ0
+(Might be up only for a bit) 
+
+
 ![GUI](./GUI.png)
 
 Research code for detecting weak category-specific signals in EEG data during visual object perception.
