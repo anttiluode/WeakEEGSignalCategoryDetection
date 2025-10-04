@@ -105,6 +105,25 @@ Source localization using MNE-Python (sLORETA)
 3D brain visualization showing category-specific activation patterns
 Interactive category selection and probability thresholding
 
+# How the Brain Projection Works
+
+Think of the pipeline as three parts working together:
+
+[Alljoined EEG dataset] → real brain signals (64 channels × time)
+          │
+          ▼
+      [CNN model] → scores how "bear-like", "broccoli-like", etc. each EEG trial is
+          │
+          ▼
+    [MNE source localization] → projects the selected EEG signals back onto a 3D brain
+
+The EEG dataset is essential — it provides the actual brain recordings.
+The CNN model doesn’t generate EEG. It only filters/flags the real EEG trials where the signal is strongest for a given category.
+MNE then takes those filtered real EEGs and performs an inverse projection, showing where in the brain the signals most likely came from.
+
+So the model alone (even with COCO images and JSON labels) cannot produce brain maps.
+You always need the Alljoined EEG recordings for MNE to work.
+
 # Installation
 
 pip install torch torchvision mne datasets scipy matplotlib pyvistaqt
