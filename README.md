@@ -124,6 +124,9 @@ MNE then takes those filtered real EEGs and performs an inverse projection, show
 So the model alone (even with COCO images and JSON labels) cannot produce brain maps.
 You always need the Alljoined EEG recordings for MNE to work.
 
+If you really want to se see just the image categories. Ask your neighborhood AI to strip off the CNN 
+scoring for the signal and ask it to show only the eeg's without the CNN model. 
+
 # Installation
 
 pip install torch torchvision mne datasets scipy matplotlib pyvistaqt
