@@ -1,5 +1,7 @@
 # EEG Weak Signal Category Detection
 
+EDIT: Added version 2 with contrast analysis. 
+
 Video about it: 
 
 https://youtu.be/8yUkTr3MNZ0
@@ -195,3 +197,53 @@ Research/educational use. If using this code, please cite the Alljoined dataset 
 # Acknowledgments
 
 Built using MNE-Python, PyTorch, and the Alljoined EEG-Image dataset.
+
+# About Version 2: 
+
+## Contrast Analysis (V2 Feature)
+
+The Brain Explorer now includes **contrast localization** to isolate pure category-specific signals.
+
+### How it works
+
+Traditional source localization averages high-probability trials, but this includes both category-specific activation AND generic visual processing present in all trials. Contrast analysis reveals ONLY the differential signal:
+
+1. **High group**: Top 25% probability trials (strong detection)
+2. **Low group**: Bottom 25% probability trials (weak detection)  
+3. **Contrast**: Difference signal (high - low) localizes to brain
+
+This subtracts out shared visual processing and isolates regions specifically engaged during successful category detection.
+
+### Example: Broccoli Contrast
+
+When comparing high vs low broccoli detection trials:
+- **Red regions**: More active during successful broccoli detection
+- **Blue regions**: More active during failed detection (rare)
+- **Gray regions**: No difference (generic visual processing)
+
+**Results show:**
+- Bilateral occipital cortex (V1/V2): Stronger visual encoding
+- Ventral temporal pathway: Enhanced object recognition
+- Parietal cortex: Increased attention deployment
+- Peak timing: 240-270ms (semantic processing window)
+
+### Interpretation
+
+Contrast maps reveal the **neural correlates of successful category detection**. 
+Unlike standard localization (which shows "where the brain responds to broccoli images"),
+contrast shows "what's different when the brain successfully recognizes broccoli vs when it fails."
+
+This approach:
+- Removes environmental confounds present in both conditions
+- Isolates weak category-specific signals from strong generic responses
+- Validates that timing/location align with known object recognition pathways
+
+### Usage
+
+In the Brain Explorer:
+1. Select category (e.g., broccoli, fire hydrant)
+2. Click "Contrast Analysis (High vs Low)"
+3. View differential activation map with RdBu_r colormap
+4. Regions in red are the "pure detection signal"
+
+**Note:** Requires sufficient trials (N≥12 recommended) in each percentile group for stable estimates.
