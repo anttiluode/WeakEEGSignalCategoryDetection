@@ -1,6 +1,6 @@
 # EEG Weak Signal Category Detection
 
-EDIT: Added version 2 with contrast analysis. 
+EDIT: Added version 2 with contrast analysis, Claude wrote a bit about it to the end of this readme. 
 
 Video about it: 
 
