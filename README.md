@@ -43,6 +43,30 @@ Cake: d=0.652, p=0.006 (medium effect)
 Train: d=0.397, p=0.056 (small effect, marginal)
 Fire hydrant: d=0.414, p=0.084 (small effect, marginal)
 
+# Signal Filtering and Environmental Contamination
+
+Why we exclude certain categories:Initial experiments revealed that objects
+physically present in the laboratory environment showed signals 3-4× stronger 
+than objects only visible in the images:
+
+Person: Δ=+1.92%, d=0.22 (experimenters, subjects visible)
+Chair: Δ=+2.71%, d=0.75 (laboratory furniture)
+Laptop/Book: Similar strong signals (experimental equipment)
+These categories were excluded from the training set because their signals likely reflect:
+
+Physical presence rather than image content
+Subject awareness of people in the room
+Ambient noise from equipment or movement
+Constant sensory input unrelated to the visual stimulus
+Impact of filtering:After excluding lab-present objects, signals weakened but became more interpretable:
+
+Animal/vehicle categories showed consistent positive shifts (Δ=0.3-0.8%)
+Effect sizes remained detectable (d=0.2-0.4 for most categories)
+Food items emerged as strongest "clean" signals (broccoli d=1.027, cake d=0.652)
+This suggests the remaining signals reflect actual visual semantic processing rather than environmental artifacts,
+though they are considerably weaker than the contaminated signals.
+The trade-off is necessary for isolating image-related brain activity.
+
 # Temporal dynamics:
 
 Weak early activity (0-200ms): Generic visual processing
