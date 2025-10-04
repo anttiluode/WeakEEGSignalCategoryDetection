@@ -142,6 +142,18 @@ Inverse solution: sLORETA with λ²=1/9
 Source space: fsaverage template (ico4 spacing)
 Percentile-based color scaling (95th-99th) for visualization
 
+# Links
+
+Alljoined 05 125 Dataset: 
+
+https://huggingface.co/datasets/Alljoined/05_125
+
+COCO Annotations**: Required for multi-label ground truth (instances_train2017.json).
+
+Download: [COCO Dataset Official Site](https://cocodataset.org/#download)
+
+(select "2017 Train/Val annotations [241MB]").
+
 # License
 
 Research/educational use. If using this code, please cite the Alljoined dataset paper.
