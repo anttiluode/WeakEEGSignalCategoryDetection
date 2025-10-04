@@ -144,6 +144,10 @@ Percentile-based color scaling (95th-99th) for visualization
 
 # Links
 
+A small model I trained with my 3060: 
+
+https://huggingface.co/Aluode/WeakEEGSignalCategoryDetection/tree/main
+
 Alljoined 05 125 Dataset: 
 
 https://huggingface.co/datasets/Alljoined/05_125
