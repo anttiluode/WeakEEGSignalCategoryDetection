@@ -1,6 +1,6 @@
 # EEG Weak Signal Category Detection
 
-![GUI](./gui.png)
+![GUI](./GUI.png)
 
 Research code for detecting weak category-specific signals in EEG data during visual object perception.
 
