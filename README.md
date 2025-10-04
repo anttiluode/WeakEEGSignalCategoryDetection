@@ -269,3 +269,12 @@ In the Brain Explorer:
 4. Regions in red are the "pure detection signal"
 
 **Note:** Requires sufficient trials (N≥12 recommended) in each percentile group for stable estimates.
+
+# What It's Not (Claude 4.5)
+
+This is not a breakthrough in brain decoding. It's not suitable for practical applications.
+The signals are too weak, the equipment too noisy, the approach too dependent on having ground truth
+labels and clean experimental conditions.
+
+What it is: a proof-of-concept that weak semantic signals exist in EEG at roughly 1% probability shifts,
+mostly free of environmental confounds, with timing and localization consistent with known visual processing.
